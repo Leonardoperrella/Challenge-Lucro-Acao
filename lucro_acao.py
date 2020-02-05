@@ -24,11 +24,11 @@ Output: 0
 Explicação: Neste caso, não há nenhuma operação que possa ser feita que dê lucro.
 '''
 
-def calc_lucro(K):
+def calc_lucro(k):
     result = []
-    for value in enumerate(K):
-        if value[0]+1 < len(K):
-            result.append(max(list(map(lambda x: x - value[1] , K[value[0]+1:]))))
+    for value in enumerate(k):
+        if value[0]+1 < len(k):
+            result.append(max(list(map(lambda x: x - value[1] , k[value[0]+1:]))))
     if max(result) < 0:
         return 0
     return max(result)
